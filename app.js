@@ -8,8 +8,8 @@ const transactionRoutes = require('./routes/transactionRoutes')
 const dashboardRoutes = require('./routes/dashboardRoutes')
 
 app.use(cors({
-  origin: '*'
-}));
+  origin: ['http://localhost:3000', 'https://lume-cashier-app.vercel.app']
+}))
 
 app.use(express.json())
 
