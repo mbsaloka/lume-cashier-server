@@ -7,7 +7,10 @@ const productRoutes = require('./routes/productRoutes')
 const transactionRoutes = require('./routes/transactionRoutes')
 const dashboardRoutes = require('./routes/dashboardRoutes')
 
-app.use(cors())
+app.use(cors({
+  origin: '*'
+}));
+
 app.use(express.json())
 
 app.use('/api/products', productRoutes)
